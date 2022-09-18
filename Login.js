@@ -9,10 +9,6 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import Home from "./Home";
-
-const windowWidth = Dimensions.get("window").width;
-const windowHeight = Dimensions.get("window").height;
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
@@ -30,9 +26,10 @@ export default function Login({ navigation }) {
         <TextInput
           style={styles.TextInput}
           placeholder="Email"
+          value={email}
           autoCapitalize={"none"}
           placeholderTextColor="#FFF"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(text) => setEmail(text)}
         />
       </View>
 
@@ -40,6 +37,7 @@ export default function Login({ navigation }) {
         <TextInput
           style={styles.TextInput}
           placeholder="Password"
+          value={password}
           placeholderTextColor="#FFF"
           autoCapitalize={"none"}
           secureTextEntry={true}

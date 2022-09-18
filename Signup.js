@@ -17,6 +17,7 @@ const Signup = ({ navigation }) => {
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
     return (
     <View style={styles.container}>
@@ -26,9 +27,10 @@ const Signup = ({ navigation }) => {
         <TextInput
           style={styles.TextInput}
           placeholder="First name"
+          value={firstname}
           autoCapitalize={"sentences"}
           placeholderTextColor="#FFF"
-          onChangeText={(firstname) => setFirstname(firstname)}
+          onChangeText={(text) => setFirstname(text)}
         />
       </View>
 
@@ -36,9 +38,10 @@ const Signup = ({ navigation }) => {
         <TextInput
           style={styles.TextInput}
           placeholder="Surname"
+          value={surname}
           autoCapitalize={"sentences"}
           placeholderTextColor="#FFF"
-          onChangeText={(surname) => setSurname(surname)}
+          onChangeText={(text) => setSurname(text)}
         />
       </View>
 
@@ -46,9 +49,10 @@ const Signup = ({ navigation }) => {
         <TextInput
           style={styles.TextInput}
           placeholder="Physical address"
+          value={address}
           autoCapitalize={"sentences"}
           placeholderTextColor="#FFF"
-          onChangeText={(address) => setAddress(address)}
+          onChangeText={(text) => setAddress(text)}
         />
       </View>
 
@@ -56,9 +60,10 @@ const Signup = ({ navigation }) => {
         <TextInput
           style={styles.TextInput}
           placeholder="Email"
+          value={email}
           autoCapitalize={"none"}
           placeholderTextColor="#FFF"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(text) => setEmail(text)}
         />
       </View>
 
@@ -66,6 +71,7 @@ const Signup = ({ navigation }) => {
         <TextInput
           style={styles.TextInput}
           placeholder="Password"
+          value={password}
           autoCapitalize={"none"}
           placeholderTextColor="#FFF"
           secureTextEntry={true}
@@ -77,10 +83,11 @@ const Signup = ({ navigation }) => {
         <TextInput
           style={styles.TextInput}
           placeholder="Cornfirm Password"
+          value={confirmPassword}
           autoCapitalize={"none"}
           placeholderTextColor="#FFF"
           secureTextEntry={true}
-          //onChangeText={(password) => setPassword(password)}
+          onChangeText={(text) => setConfirmPassword(text)}
         />
       </View>
 
